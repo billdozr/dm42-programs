@@ -7,7 +7,7 @@ This repository contains programs compatible with the SwissMicros DM42/DM42n cal
 ## Prerequisites
 Before running the programs on DM42/DM42n in this repository, you need to install the txt2raw utility to encode the source files:
 
-1. Download the txt2raw utility from the Free42 website: https://thomasokken.com/free42/ and make sure it's on your PATH
+1. Download the txt2raw utility from the Free42 website: https://thomasokken.com/free42/
 2. Look for the `raw2txt, txt2raw` section on the page
 3. Download the appropriate version for your operating system
 4. Make sure the utility is in your system PATH or in the same directory as the encode.sh script
