@@ -2,7 +2,7 @@
 SwissMicros DM42 compatible programs
 
 ## Overview
-This repository contains programs compatible with the SwissMicros DM42/DM42n calculator thar runs Free42. Free42 is based on a decimal floating-point math library and IEEE 754-2008 quadruple precision decimal floating-point, encoding numbers in 16 bytes and giving 34 decimal places of precision with exponents ranging from -6143 to +6144.
+This repository contains programs compatible with the SwissMicros DM42/DM42n calculator that runs Free42. Free42 is based on a decimal floating-point math library and IEEE 754-2008 quadruple precision decimal floating-point, encoding numbers in 16 bytes and giving 34 decimal places of precision with exponents ranging from -6143 to +6144.
 
 ## Prerequisites
 Before running the programs on DM42/DM42n in this repository, you need to install the txt2raw utility to encode the source files:
