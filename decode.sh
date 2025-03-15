@@ -35,9 +35,18 @@ if [ ! -f "$TXT_FILE" ]; then
     exit 1
 fi
 
-# Move the txt file to the src/ directory and rename to .free42 extension
+# Move the txt file to the src/ directory with proper extension
+# Remove .txt extension
 BASE_NAME=$(basename "$TXT_FILE" .txt)
-echo "Moving '$TXT_FILE' to src/ directory as '$BASE_NAME.free42'..."
-mv "$TXT_FILE" "src/$BASE_NAME.free42"
 
-echo "Conversion complete. Text file is now at: src/$BASE_NAME.free42"
+# If the base name already ends with .free42, don't add it again
+if [[ "$BASE_NAME" == *.free42 ]]; then
+    TARGET_FILE="$BASE_NAME"
+else
+    TARGET_FILE="$BASE_NAME.free42"
+fi
+
+echo "Moving '$TXT_FILE' to src/ directory as '$TARGET_FILE'..."
+mv "$TXT_FILE" "src/$TARGET_FILE"
+
+echo "Conversion complete. Text file is now at: src/$TARGET_FILE"

@@ -15,10 +15,10 @@ if [ ! -f "$INPUT_FILE" ]; then
     exit 1
 fi
 
-# Check if out/ directory exists, if not create it
-if [ ! -d "out" ]; then
-    echo "Creating output directory 'out/'..."
-    mkdir -p out
+# Check if raw/ directory exists, if not create it
+if [ ! -d "raw" ]; then
+    echo "Creating output directory 'raw/'..."
+    mkdir -p raw
 fi
 
 # Execute the txt2raw command
@@ -34,8 +34,8 @@ if [ ! -f "$RAW_FILE" ]; then
     exit 1
 fi
 
-# Move the raw file to the out/ directory
-echo "Moving '$RAW_FILE' to out/ directory..."
-mv "$RAW_FILE" out/
+# Move the raw file to the raw/ directory
+echo "Moving '$RAW_FILE' to raw/ directory..."
+mv "$RAW_FILE" raw/
 
-echo "Conversion complete. Raw file is now at: out/$(basename "$RAW_FILE")"
+echo "Conversion complete. Raw file is now at: raw/$(basename "$RAW_FILE")"
